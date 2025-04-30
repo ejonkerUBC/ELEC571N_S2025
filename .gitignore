@@ -1,0 +1,46 @@
+# LaTeX intermediate and output files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.xdv
+
+# Editor backups and temp files
+*~
+*.bak
+*.backup
+*.tmp
+*.swp
+*.swo
+
+# PDF and DVI output (optional, if you regenerate them)
+# *.pdf
+*.dvi
+*.ps
+
+# Glossaries and index
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.loa
+*.ilg
+*.ind
+*.inx
+
+# Build directories (e.g., latexmk or arara)
+_build/
