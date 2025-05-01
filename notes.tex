@@ -83,6 +83,45 @@ The main questions that we are concerned with are:
 
 Immediately, we can give qualitative answers to these questions: There are two scattered fields: the transmitted field, and the reflected field. The source of these scattered fields is the oscillations of the electrons inside region II. We 
 
-\subsection{Maxwell's equations}
+\subsection{Maxwell equations}
+The fundamental, microscopic Maxwell equations written in cgs units are 
+\begin{eqnarray}
+    c\vec\nabla\times\vec e &= &-\dot{\vec{b}} \\
+    c\vec\nabla\times\vec b &= &\dot{\vec{e}} + 4\pi \vec{J}_\mu \\
+    \vec\nabla\cdot\vec b &= &0 \\
+    \vec\nabla\cdot\vec e &= &4\pi \rho_\mu.
+\end{eqnarray}
+
+In mks units, they are
+\begin{eqnarray}
+    \vec\nabla\times\vec e &= &-\dot{\vec{b}} \\
+    \vec\nabla\times\vec b &= &\epsilon_0 \mu_0 \dot{\vec{e}} + \mu_0\vec{J}_\mu \\
+    \vec\nabla\cdot\vec b &= &0 \\
+    \epsilon_0 \vec\nabla\cdot\vec e &= &\rho_\mu.
+\end{eqnarray}
+
+Here, $\vec e$ is the microscopic electric field, $\vec b$ is the microscopic magnetic field, $c$ is the speed of light, $\epsilon_0$ is the permittivity of free space, and $\mu_0$ is the permeability of free space. $\rho_\mu$ and $\vec{J}_\mu$ are the microscopic charge density and current density, respectively, and are given in general by 
+\begin{eqnarray}
+    \rho_\mu = \sum_{i}^{} q_i \delta(\vec r - \vec r_i(t)) \\
+    \vec{J}_\mu = \sum_{i}^{} q_i \vec{v}_i \delta(\vec r - \vec r_i(t)),
+\end{eqnarray}
+where the sums are over discrete charge carriers $i$ at time-dependent positions $\vec{r}_i(t)$, with drift velocities $\vec v_i$. We assume the charges are classical here. The charges in a crystal are represented in Figure \ref{fig:crystal_cartoon}.
+
+\begin{figure}
+    \label{fig:crystal_cartoon}
+    \includegraphics[width=0.6\textwidth]{figures/crystal_cartoon.png}
+    \centering
+    \caption{h}
+\end{figure}
+
+The microscopic Maxwell equations are exact: given $\rho_\mu$ and $\vec{J}_\mu$, we can solve these equations and obtain an exact solution for the fields. More practically, however, there is a need to make approximations. Typically, we average all physical quantities over a volume of some radius $R$, where the radius is much smaller than the wavelength in the medium ($R\ll\lambda$), but much larger than the atomic spacing ($R\gg\Lambda$).
+
+
+The Maxwell equations tell us that the charges produce $\vec e$ and $\vec b$. However, they do not tell us how $\vec e$ and $\vec b$ act upon the charges. To solve for the dynamics of a given charge distribution, we need the Lorentz equation, which reads
+\begin{equation}
+    m_i \ddot{\vec{r}}_i = q_i \vec e(\vec{r}_i) + \dot{\vec{r}}_i\times\vec b(\vec{r}_i),
+\end{equation}
+where $m_i$ is the mass of charge $i$. The Lorentz equation tells us that fields locally exert forces on charges.
+
 
 \end{document}
